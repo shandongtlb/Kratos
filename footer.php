@@ -31,12 +31,19 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery.hoverintent/1.8.1/jquery.hoverIntent.min.js"></script>
 <script type='text/javascript' src='<?php $this->options->themeUrl('js/superfish.min.js'); ?>'></script>
 <script type='text/javascript' src='<?php $this->options->themeUrl('js/kratos.js?ver=2.5.2'); ?>'></script>
-<script>
-$(document).pjax('a[href^="<?php Helper::options()->siteUrl()?>"]:not(a[target="_blank"], a[no-pjax])', {
-    container: '#main',
-    fragment: '#main',
-    timeout: 8000
-})
+<script> //开启pjax
+    $(document).pjax('a[href^="<?php Helper::options()->siteUrl()?>"]:not(a[target="_blank"], a[no-pjax])', {
+        container: '#main',
+        fragment: '#main',
+        timeout: 8000
+    }).on('pjax:complete', function() {
+        if (typeof Prism !== 'undefined') { //解决代码不高亮
+            var pres = document.getElementsByTagName('pre');
+            for (var i = 0; i < pres.length; i++){
+                if (pres[i].getElementsByTagName('code').length > 0)
+                pres[i].className  = 'line-numbers';}
+        Prism.highlightAll(true,null);}
+    });
 </script>
 <?php if (!$this->options->sidebarlr == 'single'): ?><script type="text/javascript">
 
