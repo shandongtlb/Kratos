@@ -49,3 +49,4 @@ if ($("#main").height() > $("#sidebar").height()) {
 <?php endif; ?>
 </body>
 </html>
+<?php $this -> footer(); ?>
