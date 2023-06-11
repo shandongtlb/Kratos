@@ -27,13 +27,6 @@
 						<div class="kratos-post-content">
                         <?php parseContent($this); ?>
 						</div>
-						<footer class="kratos-entry-footer clearfix">
-							<div class="footer-tag clearfix">
-							    <div class="pull-left"style="text-align:center">
-								<?php $this->tags(' ', true, '<a>本作品采用 知识共享署名-相同方式共享 4.0 国际许可协议 进行许可</a>'); ?>
-								</div>
-							</div>
-						</footer>
 					</div>
 					<nav class="navigation post-navigation clearfix" role="navigation">
 						<div class="nav-previous clearfix">
