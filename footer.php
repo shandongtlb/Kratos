@@ -25,11 +25,19 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 <script src="https://cdn.bootcdn.net/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
 <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type='text/javascript' src='<?php $this->options->themeUrl('js/jquery.pjax.min.js'); ?>'></script>
 <script type='text/javascript' src='<?php $this->options->themeUrl('js/jquery.waypoints.min.js'); ?>'></script>
 <script type='text/javascript' src='<?php $this->options->themeUrl('js/jquery.stellar.min.js'); ?>'></script>
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery.hoverintent/1.8.1/jquery.hoverIntent.min.js"></script>
 <script type='text/javascript' src='<?php $this->options->themeUrl('js/superfish.min.js'); ?>'></script>
 <script type='text/javascript' src='<?php $this->options->themeUrl('js/kratos.js?ver=2.5.2'); ?>'></script>
+<script>
+$(document).pjax('a[href^="<?php Helper::options()->siteUrl()?>"]:not(a[target="_blank"], a[no-pjax])', {
+    container: '#main',
+    fragment: '#main',
+    timeout: 8000
+})
+</script>
 <?php if (!$this->options->sidebarlr == 'single'): ?><script type="text/javascript">
 
 if ($("#main").height() > $("#sidebar").height()) {
