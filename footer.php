@@ -12,7 +12,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 						<div class="col-md-6 col-md-offset-3 footer-list text-center">
 
 							<p><a href="<?php $this->options ->siteUrl(); ?>"><?php $this->options->title();?></a>
-							<br>备案号：<a href="http://js.beian.miit.gov.cn">苏ICP备18063590号-1</a></p>
+							<br>备案号：<a href="https://beian.miit.gov.cn">苏ICP备xxxxxxx号-1</a></p>
 						</div>
 					</div>
 				</div>
