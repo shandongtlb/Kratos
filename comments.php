@@ -29,7 +29,7 @@ if ($comments->levels > 0) {
 $comments->alt(' odd', ' even');
 ?>">
 	<?php
-        $host = 'https://secure.gravatar.com';
+        $host = 'https://dn-qiniu-avatar.qbox.me';
         $url = '/avatar/';
         $size = '50';
         $rating = Helper::options()->commentsAvatarRating;
